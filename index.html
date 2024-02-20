@@ -1,0 +1,537 @@
+<?php
+$image_url = "./img/doll.png";
+$birthday_text = "Happiest Birthday Ever";
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For special one</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+<style>
+    html {
+  background-color: #10151B;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+
+  font-family: "Oswald", sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+#hey {
+  display: none;
+}
+
+#hey1 {
+  display: none;
+}
+
+img {
+  flex-wrap: wrap;
+  width: 99%;
+  height: 2388px;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.3;
+  z-index: -1;
+  position: absolute;
+}
+.imgdoll{
+  flex-wrap: wrap;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  padding: 89px 0px 0px 0px;
+  left: 500px;
+  opacity: 1.5;
+}
+h1 {
+  line-height: .95;
+  color: #66fcf1;
+  font-weight: 900;
+  font-size: 150px;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+.center {
+  position: absolute;
+  flex-wrap: wrap;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 791px;
+  height: 50%;
+}
+
+.btn,
+.btn1 {
+  margin: 5px auto;
+  width: 220px;
+  height: 100px;
+  padding: 6px 0 0 3px;
+  border: 2px solid #66fcf1;
+  border-radius: 5px;
+  background: none;
+  font-size: 16px;
+  position: absolute;
+  transform: translateY(-50%);
+  line-height: 54px;
+  color: #fff7f7;
+  letter-spacing: .25em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: background .4s, color .4s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 10px;
+  right: 20px;
+}
+
+.btn1 {
+  padding: 10px;
+  left: 48px;
+}
+
+.btn:hover {
+  background: #66fcf1;
+  color: #10151B;
+}
+.btn:hover:after {
+  content: "Thank you";
+  display: block;
+  position: absolute;
+  margin-top: 2px; /* Adjust as per your need */
+  margin-left: -152px; /* Adjust as per your need */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn1:hover {
+  background: #66fcf1;
+  color: #10151B;
+  transform: scale(1.1);
+}
+.btn3:hover {
+  background: #66fcf1;
+  color: #10151B;
+  transform: scale(1.1);
+
+}
+
+#sepbtn .btn3 {
+  margin: 5px auto;
+  width: 180px;
+  height: 60px;
+  padding: 6px 0 0 3px;
+  border: 2px solid #66fcf1;
+  border-radius: 5px;
+  background: none;
+  font-size: 16px;
+  position: absolute;
+  transform: translateY(-50%);
+  line-height: 54px;
+  color: #fff7f7;
+  letter-spacing: .25em;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: background .4s, color .4s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align:  center;
+  top: 839px;
+  left: 578px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.dolll {
+  flex-wrap: wrap;
+  position: relative;
+  top: 529px;
+  left: 08px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+/* Style the envelope and the card */
+.envelop {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #f08080;
+}
+
+.envelop:before {
+  background-color: #f08080;
+  content: "";
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  transform: rotate(45deg);
+  top: -105px;
+  left: 44px;
+  border-radius: 30px 0 0 0;
+}
+
+.card {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 270px;
+  height: 170px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 240px;
+  height: 140px;
+  left: 12px;
+  top: 12px;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  text-align: center;
+  line-height: 25px;
+  top: 19px;
+  left: 85px;
+  color: #003049;
+}
+
+.heart {
+  background-color: #d62828;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 110px;
+  left: 105px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #d62828;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #f4978e;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 300px solid #f8ad9d;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+  width: 0;
+  height: 0;
+}
+
+/* Add the shadow */
+.shadow {
+
+  width: 330px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: -52px;
+  left: 0px;
+  animation: scale 3s linear infinite;
+  z-index: -1;
+}
+
+@media (max-width:768px) {
+  h1 {
+    line-height: 4.95;
+  }
+
+  img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 837px;
+    height: 1435px;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+    position: absolute;
+  }
+
+  .dolll {
+    position: relative;
+    top: 709px;
+    left: 40px;
+    cursor: pointer;
+    animation: up 3s linear infinite;
+  }
+
+  #sepbtn {
+    top: 1017px;
+    left: 325px;
+  }
+  .imgdoll{
+    flex-wrap: wrap;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    padding: 89px 0px 0px 89px;
+    opacity: 1.5;
+  }
+}
+
+/* To move the envelope up and down */
+@keyframes up {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+/* to scale the shadow */
+@keyframes scale {
+
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(0.85);
+  }
+}
+
+
+@media (max-width:768px) {
+  .button.yes {
+    left: -445px;
+    flex-wrap: wrap;
+
+  }
+
+  .doll {
+    width: 100%;
+  }
+}
+
+@media (max-width:425px) {
+  .button.yes {
+    left: -400px;
+    flex-wrap: wrap;
+
+  }
+  .dolll{
+    left: 210px;
+  }
+}
+
+@media (max-width:376px) {
+  .button.yes {
+    left: -346px;
+    flex-wrap: wrap;
+
+
+  }
+  .dolll{
+    left: 235px;
+  }
+}
+
+@media (max-width:320px) {
+  .button.yes {
+    left: -295px;
+    flex-wrap: wrap;
+
+  }
+  .dolll{
+    left: 261px;
+  }
+}
+</style>
+</head>
+
+<body>
+    <!-- <img src="./img/DOLL.png" alt=""> -->
+    <img src="./img/KDS_6789.JPG" alt="">
+    <div class="center" id="center">
+        <h1>WELCOME</h1>
+        <div class="btn" id="soft">Hey Doll, Double Tap</div>
+        <div class="btn1" >Are You Busy , Really</div>
+    </div>
+    <div class="container">
+        <div class="dolll" id="hey">
+            <div class="envelop"></div>
+            <div class="front">
+
+            </div>
+            <div class="card">
+                <div class="text">Happy</br> Birthday</br> Yaar!</div>
+                <div class="heart"></div>
+            </div> 
+           </div>
+    </div>
+<div class="sepbtn" >
+            <div class="btn3" id="sepbtn">
+                ok now here</div>
+    </div>
+    <!-- <div class="shadow" id="hey1"></div> -->
+    </div>
+    <div class="container">
+        <div class="img">
+        <img class="imgdoll" src="./img/DOLL.png" alt="">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".container")
+                .mouseenter(function () {
+                    $(".card").stop().animate(
+                        {
+                            top: "-90px",
+                        },
+                        "slow"
+                    );
+                })
+                .mouseleave(function () {
+                    $(".card").stop().animate(
+                        {
+                            top: 0,
+                        },
+                        "slow"
+                    );
+                });
+        });
+
+        document.querySelector('.btn1').addEventListener('mouseover', function () {
+            var newX = Math.random() * (window.innerWidth - 100);
+            var newY = Math.random() * (window.innerHeight - 50);
+            this.style.bottom = newX + 'px';
+            this.style.top = newY + 'px';
+        });
+
+
+        document.getElementById("soft").onclick = function () {
+            var body = document.getElementById("center");
+            var envelope = document.getElementById("hey");
+            var shadow = document.getElementById("hey1");
+            var btn = document.getElementById("sepbtn");
+            if (envelope.style.display === "none") {
+
+                envelope.style.display = "block";
+                body.style.display = "none";
+                shadow.style.display = "none";
+                btn.style.display = "block";
+            } else {
+
+                envelope.style.display = "none";
+                body.style.display = "block";
+                shadow.style.display = "none";
+                btn.style.display = "none";
+
+            }
+        };
+        
+  document.querySelector('.btn').addEventListener('click', function() {
+    var photo = document.getElementById('birthdayPhoto');
+    photo.style.display = 'block';
+    var text = document.querySelector('.birthday-text');
+    text.style.display = 'block';
+  });
+  
+  document.querySelector('.btn1').addEventListener('mouseover', function() {
+    var newX = Math.random() * (window.innerWidth - 100);
+    var newY = Math.random() * (window.innerHeight - 50);
+    this.style.left = newX + 'px';
+    this.style.top = newY + 'px';
+  });
+  
+
+
+    </script>
+    <script src="./assets/js/style.js"></script>
+
+
+
+
+</body>
+
+</html>
